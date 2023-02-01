@@ -1,7 +1,7 @@
 import CreateUser from "@src/pages/CreateUser/CreateUser";
 import LoginPage from "@src/pages/LoginPage/LoginPage";
 import MainPage from "@src/pages/MainPage/MainPage";
-import NewBox from "@src/pages/NewBox/NewBox";
+import UpdateBox from "@src/pages/UpdateBox/UpdateBox";
 
 const routerMap = [
   {
@@ -21,8 +21,8 @@ const routerMap = [
   },
   {
     auth: "common",
-    path: "/new-box",
-    page: <NewBox />,
+    path: "/update-box",
+    page: <UpdateBox />,
   },
 ];
 
