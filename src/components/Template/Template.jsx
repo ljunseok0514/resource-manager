@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import classNames from "classnames/bind";
 import style from "./style.module.scss";
+import SideNav from "../SideNav/SideNav";
 const cx = classNames.bind(style);
 
 function NewBox({ text, onChange }) {
@@ -42,7 +43,7 @@ function Template({ children }) {
 
   return (
     <div className={cx("container")}>
-      <div className={cx("nav_container")}>
+      {/* <div className={cx("nav_container")}>
         <Link to="/update-box">
           <div className={cx("list_wrap")} onClick={onClickAdd}>
             <div className={cx("list_box")}>
@@ -51,7 +52,8 @@ function Template({ children }) {
           </div>
         </Link>
         {isLocker && <NewBox onChange={onChange} text={text} />}
-      </div>
+      </div> */}
+      <SideNav />
       {children}
     </div>
   );

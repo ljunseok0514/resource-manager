@@ -1,13 +1,8 @@
 import React from "react";
-import { useRecoilValue } from "recoil";
-
-import { resourceListAtom } from "@src/store/store";
+import ResourceDetailPageContents from "@src/components/pageContents/ResourceDetailPageContents/ResourceDetailPageContents";
 
 function ResourceDetailPage() {
-  const listState = useRecoilValue(resourceListAtom);
-  console.log(listState);
-
-  return <div>ResourceDetailPage</div>;
+  return <ResourceDetailPageContents />;
 }
 
 export default ResourceDetailPage;
