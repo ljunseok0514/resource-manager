@@ -2,6 +2,7 @@ import { routerMap } from "@src/Router/routerMap";
 import { Link } from "react-router-dom";
 import Template from "./components/Template/Template";
 import ReactRouter from "./Router/ReactRouter";
+import "./initial.css";
 
 function App() {
   return (

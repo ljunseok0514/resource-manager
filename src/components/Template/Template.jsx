@@ -1,10 +1,11 @@
 import { useState } from "react";
+import UpdateBox from "@src/pages/UpdateBox/UpdateBox";
+
+import { Link } from "react-router-dom";
+
 import classNames from "classnames/bind";
 import style from "./style.module.scss";
-import initial from "./initial.min.css";
-import UpdateBox from "@src/pages/UpdateBox/UpdateBox";
 const cx = classNames.bind(style);
-import { Link } from "react-router-dom";
 
 function NewBox({ text, onChange }) {
   return (
