@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-function UpdateBox() {
-  const [text, setText] = useState("새로운사물함1");
-  const onChange = (e) => {
-    setText(e.target.value);
-  };
+function UpdateBox({ text, onChange }) {
+  //const [text, setText] = useState("새로운사물함1");
+  //const onChange = (e) => {
+  //    setText(e.target.value);
+  //};
+  console.log("updatebox", text, onChange);
   return (
     <div>
       NewBox

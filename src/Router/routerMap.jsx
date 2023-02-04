@@ -22,7 +22,7 @@ const routerMap = [
   {
     auth: "common",
     path: "/update-box",
-    page: <UpdateBox />,
+    page: <UpdateBox text="123" />,
   },
 ];
 
