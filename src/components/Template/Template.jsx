@@ -27,22 +27,6 @@ function NewBox({ text, onChange }) {
   );
 }
 
-function ExampleComponent({ onIncrease }) {
-  const [count, setCount] = useState(0);
-
-  return (
-    <button
-      onClick={() => {
-        const increased = count + 1;
-        setCount(increased);
-        onIncrease(increased);
-      }}
-    >
-      데이터 넘겨주기 예시
-    </button>
-  );
-}
-
 function Template({ children }) {
   const [isLocker, setIsLocker] = useState(false);
   const onClickAdd = () => {
@@ -51,11 +35,6 @@ function Template({ children }) {
   const [text, setText] = useState("");
   const [value, setValue] = useState("test");
   const chageValue = () => setValue("testtest");
-
-  const onIncrease = (count) => {
-    // 여기서 ExampleComponent의 데이터를 넘겨받음
-    console.log(count);
-  };
 
   const onChange = (e) => {
     setText(e.target.value);
@@ -72,7 +51,6 @@ function Template({ children }) {
           </div>
         </Link>
         {isLocker && <NewBox onChange={onChange} text={text} />}
-        {/* <ExampleComponent onIncrease={onIncrease} /> */}
       </div>
       {children}
     </div>
