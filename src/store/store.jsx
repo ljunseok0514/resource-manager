@@ -6,3 +6,8 @@ export const resourceListAtom = atom({
     list: [],
   },
 });
+
+export const boxTitle = atom({
+  key: "boxTitle",
+  default: "새 사물함",
+});

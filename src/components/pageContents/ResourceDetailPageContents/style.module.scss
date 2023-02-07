@@ -1,0 +1,39 @@
+.box_update_container {
+  display: flex;
+  width: 1300px;
+  margin: 50px auto;
+  .box_title {
+    height: auto;
+    width: 1000px;
+    font-size: 22px;
+    border: 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  .box_item_btn {
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .box_item {
+    height: 100px;
+    width: 1000px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    .box_item_info {
+      display: flex;
+      align-items: center;
+    }
+    .box_item_img {
+      height: 80px;
+      width: 80px;
+      border: 1px solid #000;
+      margin-right: 10px;
+    }
+    .box_item_count {
+      display: flex;
+    }
+  }
+}
