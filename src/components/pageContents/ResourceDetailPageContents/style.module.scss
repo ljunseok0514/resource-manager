@@ -10,9 +10,16 @@
     border-bottom: 1px solid #000;
     margin-bottom: 20px;
   }
+  .box_title:focus {
+    outline: none;
+  }
   .box_item_btn {
     cursor: pointer;
     margin-bottom: 20px;
+    padding: 10px;
+  }
+  .box_item_btn:hover {
+    background: #f8f8f8;
   }
   .box_item {
     height: 100px;
@@ -25,15 +32,55 @@
     .box_item_info {
       display: flex;
       align-items: center;
+      width: 100%;
+    }
+    .box_item_title {
+      width: 100%;
+    }
+    .box_item_title input {
+      width: calc(100% - 40px);
+      margin: 0 20px;
+      border: 0;
+      border-bottom: 1px solid #000;
+      box-sizing: border-box;
+    }
+    .box_item_title input:focus {
+      outline: none;
     }
     .box_item_img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 80px;
       width: 80px;
       border: 1px solid #000;
       margin-right: 10px;
     }
+    .box_item_img:hover {
+      cursor: pointer;
+    }
     .box_item_count {
       display: flex;
+    }
+    .box_item_count_num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 28px;
+      width: 28px;
+      font-size: 20px;
+    }
+    .box_item_count_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 28px;
+      width: 28px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+    .box_item_count_btn:hover {
+      background: #f8f8f8;
     }
   }
 }
