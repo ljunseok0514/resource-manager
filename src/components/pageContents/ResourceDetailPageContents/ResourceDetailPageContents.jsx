@@ -10,10 +10,10 @@ const cx = classNames.bind(style);
 function BoxItem() {
   const [count, setCount] = useState(0);
   const onCountPlus = () => {
-    setCount(count + 1);
+    setCount((current) => current + 1);
   };
   const onCountMinus = () => {
-    setCount(count - 1);
+    setCount((current) => current - 1);
   };
   return (
     <div className={cx("box_item")}>
