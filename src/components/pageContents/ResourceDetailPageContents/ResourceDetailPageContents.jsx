@@ -7,7 +7,7 @@ import classNames from "classnames/bind";
 import style from "./style.module.scss";
 const cx = classNames.bind(style);
 
-function BoxItem() {
+function BoxItem({ Hwayo }) {
   const [count, setCount] = useState(0);
   const onCountPlus = () => {
     setCount((current) => current + 1);
@@ -19,8 +19,7 @@ function BoxItem() {
     <div className={cx("box_item")}>
       <div className={cx("box_item_info")}>
         <div className={cx("box_item_img")}>
-          +
-          <img src="hwayo.png" alt="" />
+          <img src={Hwayo} alt="" />
         </div>
         <div className={cx("box_item_title")}>
           <input type="text" />
@@ -62,7 +61,7 @@ function ResourceDetailPageContents() {
         <div className={cx("box_item_btn")} onClick={onClickAdd}>
           +물건 추가하기
         </div>
-        {isLocker && <BoxItem />}
+        {isLocker && <BoxItem Hwayo="hwayo.png" />}
       </div>
     </div>
   );

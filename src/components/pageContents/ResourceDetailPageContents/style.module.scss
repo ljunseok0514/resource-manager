@@ -59,6 +59,10 @@
     .box_item_img:hover {
       cursor: pointer;
     }
+    .box_item_img img {
+      height: 100%;
+      width: 100%;
+    }
     .box_item_count {
       display: flex;
     }
