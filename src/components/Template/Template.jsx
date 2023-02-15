@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
 import style from "./style.module.scss";
 import SideNav from "../SideNav/SideNav";
+import TabBar from "../TabBar/TabBar";
 const cx = classNames.bind(style);
 
 function Template({ children }) {
   return (
     <div className={cx("container")}>
-      <SideNav />
+      {/* <SideNav /> */}
       {children}
+      <TabBar />
     </div>
   );
 }

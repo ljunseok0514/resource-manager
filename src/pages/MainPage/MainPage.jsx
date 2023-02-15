@@ -1,5 +1,10 @@
+import SideNav from "../../components/SideNav/SideNav";
 function MainPage() {
-  return <div>메인 페이지</div>;
+  return (
+    <div>
+      <SideNav />
+    </div>
+  );
 }
 
 export default MainPage;

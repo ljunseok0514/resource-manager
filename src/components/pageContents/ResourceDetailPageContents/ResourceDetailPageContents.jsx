@@ -5,6 +5,8 @@ import { boxTitle } from "@src/store/store";
 
 import classNames from "classnames/bind";
 import style from "./style.module.scss";
+
+import icon from "@src/components/pageContents/ResourceDetailPageContents/hwayo.png";
 const cx = classNames.bind(style);
 
 function BoxItem({ Hwayo }) {
@@ -13,25 +15,34 @@ function BoxItem({ Hwayo }) {
     setCount((current) => current + 1);
   };
   const onCountMinus = () => {
+    if (count <= 0) return;
     setCount((current) => current - 1);
   };
   return (
     <div className={cx("box_item")}>
-      <div className={cx("box_item_info")}>
-        <div className={cx("box_item_img")}>
-          <img src={Hwayo} alt="" />
-        </div>
+      <div className={cx("box_item_top")}>
         <div className={cx("box_item_title")}>
-          <input type="text" />
+          <input type="text" placeholder="새 물건" />
+        </div>
+        <div className={cx("box_item_del")}>x</div>
+      </div>
+      <div className={cx("box_item_middle")}>
+        <div className={cx("box_item_img")}>
+          <img src={icon} alt="" />
+        </div>
+        <div className={cx("box_item_memo")}>
+          <textarea></textarea>
         </div>
       </div>
-      <div className={cx("box_item_count")}>
-        <div className={cx("box_item_count_btn")} onClick={onCountPlus}>
-          +
-        </div>
-        <div className={cx("box_item_count_num")}>{count}</div>
-        <div className={cx("box_item_count_btn")} onClick={onCountMinus}>
-          -
+      <div className={cx("box_item_bottom")}>
+        <div className={cx("box_item_count")}>
+          <div className={cx("box_item_count_btn")} onClick={onCountMinus}>
+            -
+          </div>
+          <div className={cx("box_item_count_num")}>{count}</div>
+          <div className={cx("box_item_count_btn")} onClick={onCountPlus}>
+            +
+          </div>
         </div>
       </div>
     </div>
@@ -51,18 +62,16 @@ function ResourceDetailPageContents() {
 
   return (
     <div className={cx("box_update_container")}>
-      <div>
-        <input
-          type="text"
-          onChange={onChangeBox}
-          className={cx("box_title")}
-          placeholder="새 사물함"
-        />
-        <div className={cx("box_item_btn")} onClick={onClickAdd}>
-          +물건 추가하기
-        </div>
-        {isLocker && <BoxItem Hwayo="hwayo.png" />}
+      <input
+        type="text"
+        onChange={onChangeBox}
+        className={cx("box_title")}
+        placeholder="새 사물함"
+      />
+      <div className={cx("box_item_btn")} onClick={onClickAdd}>
+        + 물건 추가하기
       </div>
+      {isLocker && <BoxItem />}
     </div>
   );
 }

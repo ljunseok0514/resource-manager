@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import SideNavItem from "./SideNavItem/SideNavItem";
 import { boxTitle } from "@src/store/store";
 import { useRecoilState } from "recoil";
+import { Link } from "react-router-dom";
 
 import classNames from "classnames/bind";
 import style from "./style.module.scss";
@@ -55,11 +56,15 @@ function SideNav() {
   return (
     <div className={cx("nav_container")}>
       <div className={cx("list_wrap")}>
-        <div onClick={onClickAdd} className={cx("list_box")}>
-          <div className={cx("list_text")}>+서랍 추가하기</div>
-        </div>
+        <Link to={"resource-detail/0"}>
+          <div onClick={onClickAdd} className={cx("list_box")}>
+            <div className={cx("list_text")}>+서랍 추가하기</div>
+          </div>
+        </Link>
       </div>
-      {isLocker && <NavBox />}
+      <NavBox />
+      {/* {isLocker && <NavBox />} */}
+      {/* pc버전에서 쓰기 */}
     </div>
   );
 }

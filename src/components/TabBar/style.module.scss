@@ -1,0 +1,14 @@
+.tab_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  height: 76px;
+  width: 100%;
+  border-top: 1px solid #c9c9c9;
+  background: #fff;
+  .btn {
+    cursor: pointer;
+  }
+}
