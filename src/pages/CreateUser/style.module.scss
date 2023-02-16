@@ -4,60 +4,60 @@ form {
   align-items: center;
   justify-content: center;
   text-align: center;
-  .login_box {
+  .user_box {
     width: 100%;
   }
-  .login_logo {
+  .user_logo {
     font-size: 26px;
     font-weight: 900;
     margin-bottom: 40px;
   }
-  .login_title {
+  .user_title {
     font-size: 22px;
-    margin-bottom: 40px;
-  }
-  .login_id input {
-    height: 38px;
-    width: 100%;
     margin-bottom: 20px;
-    font-size: 18px;
-    border: 0;
-    border-bottom: 1px solid #000;
-    box-sizing: border-box;
   }
-  .login_id input:focus {
-    outline: none;
+  .user_pic {
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    background: #000;
+    border-radius: 45px;
+    margin-bottom: 20px;
   }
-  .login_pw input {
+  .user_pic img {
+    width: 100%;
+    overflow: hidden;
+  }
+  input {
     height: 38px;
     width: 100%;
-    // margin-bottom: 10px;
+    margin-bottom: 4px;
     font-size: 18px;
     border: 0;
     border-bottom: 1px solid #000;
     box-sizing: border-box;
   }
-  .login_pw input:focus {
+  input:focus {
     outline: none;
   }
-  .login_alt {
+  .user_alt {
     font-size: 12px;
     text-align: left;
     color: red;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 6px;
   }
-  .login_btn {
+  .user_btn {
     padding: 10px;
     border: 1px solid #000;
-    margin-bottom: 20px;
+    margin-top: 20px;
     cursor: pointer;
   }
-  .login_sub_btn {
+  .user_sub_btn {
     display: flex;
     justify-content: space-between;
   }
-  .login_sub_btn div {
+  .user_sub_btn div {
     cursor: pointer;
   }
 }

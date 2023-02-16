@@ -27,9 +27,11 @@ function TabBar() {
       <div className={cx("user_btn", "btn")}>
         <img src={user_btn} alt="user_btn" />
       </div>
-      <div className={cx("new_btn", "btn")}>
-        <img src={new_btn} alt="new_btn" />
-      </div>
+      <Link to={"/resource-detail/0"}>
+        <div className={cx("new_btn", "btn")}>
+          <img src={new_btn} alt="new_btn" />
+        </div>
+      </Link>
     </div>
   );
 }
